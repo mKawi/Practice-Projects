@@ -14,5 +14,5 @@ React30: https://www.newline.co/fullstack-react/30-days-of-react/
 Node30: https://nodejsera.com/
 
 ### Asabeneh
-JavaScript30: https://github.com/Asabeneh/30DaysOfJavaScript
+JavaScript30: https://github.com/Asabeneh/30DaysOfJavaScript  
 Python30: https://github.com/Asabeneh/30-Days-Of-Python
