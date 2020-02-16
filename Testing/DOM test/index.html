@@ -1,0 +1,38 @@
+<html>
+
+	<head>
+		<title>DOM manipulation Part 1: Adding elements</title>
+		<style type="text/css">
+			.box {
+				height: 200px;
+				width: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+		
+		</div>
+	</body>
+	
+	<script>
+	/*
+		Task: 
+		Create a new div and append it to the existing container element
+		Set the new div to have a class of "box" so that it picks up the css styling
+	*/
+
+    let container = document.querySelector('#container')
+
+    let div = document.createElement('div')
+    
+    div.innerHTML = "example string"
+
+    container.appendChild(div)
+
+    div.className = 'box'
+
+	</script>
+</html>
