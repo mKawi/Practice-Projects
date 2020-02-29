@@ -34,11 +34,11 @@ function personAccount() {
 	}
 
 	return {
-		totalIncome: totalIncome(),
-		totalExpense: totalExpense(),
-		addIncome(): addIncome(),
-		addExpense: addExpense(),
-		accountInfo: accountInfo(),
-		accountBalance: accountBalance()
+		totalIncome: totalIncome,
+		totalExpense: totalExpense,
+		addIncome: addIncome,
+		addExpense: addExpense,
+		accountInfo: accountInfo,
+		accountBalance: accountBalance
 	};
 }
