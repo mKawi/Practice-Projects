@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>30DaysOfJavaScript:23 Day: Keyboard Key </title>
+</head>
+
+<body>
+
+
+    <script>
+        const body = document.querySelector('body')
+
+        const title = document.createElement('h1')
+        title.innerText = 'Press any keyboard key'
+        body.append(title)
+        title.style.fontSize = '50px'
+        body.style.margin = 'auto 0'
+        body.style.height = '100vh'
+        body.style.display = 'flex'
+        body.style.flexDirection = 'column'
+        body.style.justifyContent = 'center'
+        body.style.alignItems = 'center'
+        body.style.fontFamily = 'Open Sans'
+
+        const keyNum = document.createElement('div')
+
+        document.addEventListener('keypress', e => {
+            const input = `<span style="color: green">${e.key.toUpperCase()}</span>`
+            title.innerHTML = `You pressed ${input}`
+            keyNum.innerHTML = ''
+            keyNum.innerText = e.keyCode
+            body.append(keyNum)
+            keyNum.style.fontSize = '100px'
+            keyNum.style.padding = '20px'
+            keyNum.style.border = '1px solid red'
+            console.log(e)
+        })
+
+    </script>
+</body>
+
+</html>

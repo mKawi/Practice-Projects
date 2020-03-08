@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>30DaysOfJavaScript:23 Day: Number Generator </title>
+</head>
+
+<body>
+    <h1>Number Generator</h1>
+    <h2>30DaysOfJavaScript:DOM Day 2</h2>
+    <h3>Author: Asabeneh Yetayeh</h3>
+
+    <div class="wrap">
+        <input type="number" id="amountOfNums" placeholder="Generate more numbers" />
+        <button>Submit</button>
+    </div>
+
+    <div class="wrapper"></div>
+
+    <script>
+
+        const body = document.querySelector('body')
+        body.style.fontFamily = 'Open Sans'
+
+        const h1 = document.querySelector('h1')
+        h1.style.margin = '20px auto'
+        h1.style.width = '800px'
+        h1.style.textAlign = 'center'
+        h1.style.color = 'green'
+
+        const h2 = document.querySelector('h2')
+        h2.style.margin = '0 auto'
+        h2.style.width = '800px'
+        h2.style.textAlign = 'center'
+
+        const h3 = document.querySelector('h3')
+        h3.style.margin = '10px auto'
+        h3.style.width = '800px'
+        h3.style.textAlign = 'center'
+        
+        const container = document.querySelector('.wrapper')
+        container.style.display = 'grid'
+        container.style.width = '800px'
+        container.style.gridTemplateColumns = '1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr'
+        container.style.margin = '0 auto'
+
+        const wrap = document.querySelector('.wrap')
+        wrap.style.margin = '20px auto'
+        wrap.style.width = '800px'
+        wrap.style.textAlign = 'center'
+
+        const inputField = document.querySelector('#amountOfNums')
+        inputField.style.padding = '7px'
+        inputField.style.width = '300px'
+
+        const button = document.querySelector('button')
+        button.style.padding = '7px'
+        button.style.width = '80px'
+        
+        button.addEventListener('click', e => {
+            container.innerHTML = ''
+            inputNumbers(inputField.value)
+        })
+
+        function inputNumbers(numOfNums) {
+            const arr = []
+
+            for (let i = 0; i <= Number(numOfNums); i++) {
+                arr.push(i)
+            }
+
+            return arr.map(num => {
+                const el = document.createElement('div')
+                el.innerText = num
+                container.append(el)
+                el.style.fontSize = '40px'
+                el.style.padding = '10px'
+                el.style.margin = '3px'
+                el.style.textAlign = 'center'
+                el.style.color = 'white'
+
+                if(Number(el.innerText) % 2 === 0) {
+                    el.style.background = 'green'
+                } else {
+                    el.style.background = 'red'
+                }
+            })
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
