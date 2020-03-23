@@ -1,6 +1,5 @@
 # Practice Projects
 
-## Summary
 Using this repository as a project dump whilst learning. All projects on here are purely for the sake of learning and documenting my journey.
 
 WesBos JavaScript30: https://javascript30.com/
